@@ -1,0 +1,2106 @@
+[
+  {
+    "query": "MacBook Air M1 2020 not connecting to Wi-Fi.",
+    "answers": [
+      "Reset NVRAM and check network preferences.",
+      "Forget Wi-Fi network and reconnect.",
+      "Restart router and update macOS."
+    ]
+  },
+  {
+    "query": "MacBook Pro M2 2023 LAN port not working with adapter.",
+    "answers": [
+      "Try a different USB-C to Ethernet adapter.",
+      "Reset network settings.",
+      "Check macOS compatibility for adapter."
+    ]
+  },
+  {
+    "query": "MacBook Air M1 2020 battery draining fast.",
+    "answers": [
+      "Lower screen brightness and quit background apps.",
+      "Check battery health in System Report.",
+      "Update to latest macOS version."
+    ]
+  },
+  {
+    "query": "MacBook Pro M2 2023 screen flickering issue.",
+    "answers": [
+      "Disable automatic graphics switching.",
+      "Update to latest macOS.",
+      "Reset SMC and NVRAM."
+    ]
+  },
+  {
+    "query": "MacBook Air M1 2020 not detecting external display.",
+    "answers": [
+      "Check cable/adapter compatibility.",
+      "Use Display Settings to manually detect.",
+      "Try different USB-C port."
+    ]
+  },
+  {
+    "query": "Trackpad not responding on MacBook Pro M2.",
+    "answers": [
+      "Reset SMC and check for software updates.",
+      "Boot in Safe Mode to check hardware.",
+      "Use external mouse temporarily."
+    ]
+  },
+  {
+    "query": "MacBook Air M1 USB devices disconnect randomly.",
+    "answers": [
+      "Reset SMC and NVRAM.",
+      "Use powered USB hub.",
+      "Check for interference or faulty port."
+    ]
+  },
+  {
+    "query": "How to reset MacBook Air M1 to factory settings?",
+    "answers": [
+      "Use macOS Recovery and erase disk via Disk Utility.",
+      "Select 'Reinstall macOS' from recovery menu.",
+      "Backup data before reset using Time Machine."
+    ]
+  },
+  {
+    "query": "HP Pavilion x360 overheating frequently.",
+    "answers": [
+      "Clean air vents and use on a flat surface.",
+      "Update BIOS and chipset drivers.",
+      "Limit background processes."
+    ]
+  },
+  {
+    "query": "HP Envy 13 shutting down while charging.",
+    "answers": [
+      "Run HP battery diagnostic tool.",
+      "Update BIOS and power settings.",
+      "Try a different charger."
+    ]
+  },
+  {
+    "query": "HP Pavilion x360 touch screen not working.",
+    "answers": [
+      "Re-enable HID-compliant touch screen in Device Manager.",
+      "Update touch screen drivers.",
+      "Run HP hardware diagnostics."
+    ]
+  },
+  {
+    "query": "HP Envy 13 keyboard backlight not turning on.",
+    "answers": [
+      "Press F5 or Fn + F5 to toggle backlight.",
+      "Check BIOS settings.",
+      "Update HP Quick Launch drivers."
+    ]
+  },
+  {
+    "query": "HP Envy 13 Wi-Fi disconnects frequently.",
+    "answers": [
+      "Update Wi-Fi drivers from HP website.",
+      "Disable power-saving for wireless adapter.",
+      "Reset network stack using CMD."
+    ]
+  },
+  {
+    "query": "How to upgrade storage in HP Pavilion x360?",
+    "answers": [
+      "Open back panel and replace M.2 SSD.",
+      "Clone existing SSD before swapping.",
+      "Refer to HP maintenance guide."
+    ]
+  },
+  {
+    "query": "Battery not charging on HP Pavilion x360.",
+    "answers": [
+      "Unplug charger, hold power for 15s, then retry.",
+      "Update BIOS and battery firmware.",
+      "Try with a different power adapter."
+    ]
+  },
+  {
+    "query": "HP Envy 13 fan is too loud.",
+    "answers": [
+      "Clean fan and vents with compressed air.",
+      "Update thermal drivers from HP site.",
+      "Switch to quiet fan profile in BIOS."
+    ]
+  },
+  {
+    "query": "MacBook Air keyboard not responsive after sleep.",
+    "answers": [
+      "Reset SMC and NVRAM.",
+      "Check Input settings in System Preferences.",
+      "Test in Safe Mode."
+    ]
+  },
+  {
+    "query": "HP Pavilion x360 freezes randomly.",
+    "answers": [
+      "Run memory diagnostics.",
+      "Check for Windows updates.",
+      "Update device drivers."
+    ]
+  },
+  {
+    "query": "MacBook Pro M2 overheating during video calls.",
+    "answers": [
+      "Close background apps before calls.",
+      "Use external cooling pad.",
+      "Reset SMC to manage thermals."
+    ]
+  },
+  {
+    "query": "HP Envy 13 screen brightness not adjustable.",
+    "answers": [
+      "Update display driver.",
+      "Enable adaptive brightness in settings.",
+      "Use keyboard shortcuts to adjust."
+    ]
+  },
+  {
+    "query": "How to record screen on MacBook Air?",
+    "answers": [
+      "Use Shift + Command + 5 shortcut.",
+      "Use QuickTime Player for screen recording.",
+      "Install third-party recorder if needed."
+    ]
+  },
+  {
+    "query": "HP Pavilion webcam not detected.",
+    "answers": [
+      "Enable camera in Device Manager.",
+      "Update camera driver.",
+      "Check privacy settings."
+    ]
+  },
+  {
+    "query": "MacBook Pro M2 not charging with USB-C.",
+    "answers": [
+      "Try different USB-C port and cable.",
+      "Reset SMC.",
+      "Check for firmware updates."
+    ]
+  },
+  {
+    "query": "HP Pavilion audio not working.",
+    "answers": [
+      "Check audio playback device in settings.",
+      "Update audio driver.",
+      "Run Windows troubleshooter."
+    ]
+  },
+  {
+    "query": "MacBook Air microphone not working on Zoom.",
+    "answers": [
+      "Grant microphone permissions in System Preferences.",
+      "Select correct input in Zoom settings.",
+      "Reset audio interface by restarting Mac."
+    ]
+  },
+  {
+    "query": "HP Envy screen flickers occasionally.",
+    "answers": [
+      "Update Intel graphics driver.",
+      "Disable hardware acceleration.",
+      "Check refresh rate settings."
+    ]
+  },
+  {
+    "query": "MacBook Pro fan running constantly.",
+    "answers": [
+      "Close CPU-heavy apps.",
+      "Reset SMC.",
+      "Check Activity Monitor for background tasks."
+    ]
+  },
+  {
+    "query": "HP Pavilion battery drains in sleep mode.",
+    "answers": [
+      "Use hibernate instead of sleep.",
+      "Update power management drivers.",
+      "Check for background wake tasks."
+    ]
+  },
+  {
+    "query": "Touch ID not working on MacBook Pro M2.",
+    "answers": [
+      "Re-register fingerprint in System Settings.",
+      "Update macOS.",
+      "Clean the Touch ID sensor area."
+    ]
+  },
+  {
+    "query": "HP Pavilion x360 stuck on HP logo at startup.",
+    "answers": [
+      "Perform hard reset.",
+      "Run startup repair using recovery media.",
+      "Reset BIOS to default settings."
+    ]
+  },
+  {
+    "query": "MacBook Air display goes black but keyboard lit.",
+    "answers": [
+      "Reset NVRAM.",
+      "Use external monitor to test display output.",
+      "Check Display settings after reboot."
+    ]
+  },
+  {
+    "query": "HP Envy 13 Bluetooth not working.",
+    "answers": [
+      "Enable Bluetooth service from Windows Services.",
+      "Update Bluetooth driver.",
+      "Unpair and re-pair the device."
+    ]
+  },
+  {
+    "query": "MacBook Pro M2 speakers buzzing.",
+    "answers": [
+      "Check for dust or physical damage.",
+      "Reset NVRAM.",
+      "Test with external audio device."
+    ]
+  },
+  {
+    "query": "HP Pavilion USB ports not working.",
+    "answers": [
+      "Try different port and device.",
+      "Check USB controller in Device Manager.",
+      "Update chipset driver."
+    ]
+  },
+  {
+    "query": "MacBook Air stuck on Apple logo.",
+    "answers": [
+      "Boot into recovery mode.",
+      "Run First Aid in Disk Utility.",
+      "Reinstall macOS if needed."
+    ]
+  },
+  {
+    "query": "HP Envy keyboard typing wrong characters.",
+    "answers": [
+      "Check input language settings.",
+      "Run keyboard troubleshooter.",
+      "Update keyboard driver."
+    ]
+  },
+  {
+    "query": "MacBook Pro won’t recognize USB drive.",
+    "answers": [
+      "Try a different USB port.",
+      "Check Disk Utility for drive visibility.",
+      "Reset SMC and try again."
+    ]
+  },
+  {
+    "query": "HP Pavilion touchpad not working.",
+    "answers": [
+      "Enable touchpad in settings.",
+      "Reinstall touchpad driver.",
+      "Use external mouse to update drivers."
+    ]
+  },
+  {
+    "query": "MacBook Air camera showing black screen.",
+    "answers": [
+      "Quit app and reopen.",
+      "Allow camera access in privacy settings.",
+      "Reset SMC."
+    ]
+  },
+  {
+    "query": "HP Envy doesn’t boot after update.",
+    "answers": [
+      "Use system restore.",
+      "Boot into safe mode and uninstall update.",
+      "Use recovery USB for repair."
+    ]
+  },
+  {
+    "query": "MacBook Pro unable to install updates.",
+    "answers": [
+      "Ensure enough storage.",
+      "Try updating in Safe Mode.",
+      "Reset software update service."
+    ]
+  },
+  {
+    "query": "HP Pavilion sound distorted with headphones.",
+    "answers": [
+      "Disable audio enhancements.",
+      "Try a different headphone jack.",
+      "Update audio driver."
+    ]
+  },
+  {
+    "query": "MacBook Air stuck in boot loop.",
+    "answers": [
+      "Reset NVRAM and boot into safe mode.",
+      "Reinstall macOS.",
+      "Remove recently installed apps."
+    ]
+  },
+  {
+    "query": "HP Envy trackpad clicking not working.",
+    "answers": [
+      "Enable tap-to-click in settings.",
+      "Update Synaptics driver.",
+      "Use external mouse temporarily."
+    ]
+  },
+  {
+    "query": "MacBook Pro can't detect second monitor.",
+    "answers": [
+      "Check display arrangement in settings.",
+      "Try using another cable/port.",
+      "Use Detect Displays option."
+    ]
+  },
+  {
+    "query": "HP Pavilion camera flickering in Zoom.",
+    "answers": [
+      "Disable low-light compensation.",
+      "Update webcam driver.",
+      "Check lighting conditions."
+    ]
+  },
+  {
+    "query": "MacBook Air AirDrop not working.",
+    "answers": [
+      "Ensure Bluetooth and Wi-Fi are on.",
+      "Both devices must be discoverable.",
+      "Restart both devices."
+    ]
+  },
+  {
+    "query": "HP Pavilion x360 boots to a black screen.",
+    "answers": [
+      "Perform a hard reset.",
+      "Connect to external monitor to test display.",
+      "Update graphics driver in safe mode."
+    ]
+  },
+  {
+    "query": "MacBook Pro 2023 keyboard keys stuck.",
+    "answers": [
+      "Use compressed air to clean under the key.",
+      "Visit Apple for keyboard service program.",
+      "Gently remove and re-seat the keycap if confident."
+    ]
+  },
+  {
+    "query": "HP Envy 13 not waking from sleep mode.",
+    "answers": [
+      "Disable Fast Startup in power settings.",
+      "Update BIOS and graphics drivers.",
+      "Check for sleep-related power plan issues."
+    ]
+  },
+  {
+    "query": "MacBook Air trackpad clicking randomly.",
+    "answers": [
+      "Disable Force Click in settings.",
+      "Reset SMC and NVRAM.",
+      "Boot in Safe Mode to test for software conflict."
+    ]
+  },
+  {
+    "query": "HP Pavilion BIOS password forgotten.",
+    "answers": [
+      "Contact HP support with proof of ownership.",
+      "Use a jumper or reset CMOS (advanced users).",
+      "Visit service center for assistance."
+    ]
+  },
+  {
+    "query": "MacBook Pro camera not available in Teams.",
+    "answers": [
+      "Grant camera permission in Security settings.",
+      "Restart Teams and check input device settings.",
+      "Update macOS and reinstall Teams."
+    ]
+  },
+  {
+    "query": "HP Envy screen brightness too low even at 100%.",
+    "answers": [
+      "Disable adaptive brightness.",
+      "Update display driver.",
+      "Adjust brightness in BIOS if available."
+    ]
+  },
+  {
+    "query": "MacBook Air won't turn on after shutdown.",
+    "answers": [
+      "Hold Power button for 10 seconds.",
+      "Reset SMC and NVRAM.",
+      "Try charging with a different cable and port."
+    ]
+  },
+  {
+    "query": "HP Pavilion x360 pen not responding.",
+    "answers": [
+      "Replace pen battery.",
+      "Update firmware and drivers via HP Support Assistant.",
+      "Re-pair the pen via Bluetooth."
+    ]
+  },
+  {
+    "query": "MacBook Pro keeps restarting automatically.",
+    "answers": [
+      "Check panic reports in Console.",
+      "Boot into Safe Mode and uninstall recent apps.",
+      "Reinstall macOS if issue persists."
+    ]
+  },
+  {
+    "query": "HP Envy 13 audio crackling in headphones.",
+    "answers": [
+      "Update or reinstall audio drivers.",
+      "Turn off audio enhancements.",
+      "Try different audio jack or USB adapter."
+    ]
+  },
+  {
+    "query": "MacBook screen color looks washed out.",
+    "answers": [
+      "Change color profile in Display settings.",
+      "Reset NVRAM.",
+      "Check True Tone and Night Shift settings."
+    ]
+  },
+  {
+    "query": "HP Pavilion stuck on preparing automatic repair.",
+    "answers": [
+      "Enter Safe Mode and perform system restore.",
+      "Run Startup Repair from Recovery.",
+      "Check for disk errors using CHKDSK."
+    ]
+  },
+  {
+    "query": "MacBook Pro speakers very quiet at full volume.",
+    "answers": [
+      "Check audio balance and volume limit settings.",
+      "Reset NVRAM.",
+      "Use Boom 3D or similar audio booster software."
+    ]
+  },
+  {
+    "query": "HP Pavilion caps lock blinking twice continuously.",
+    "answers": [
+      "Indicates BIOS corruption; try BIOS recovery key combo.",
+      "Download BIOS update on USB and flash.",
+      "Contact HP service if issue persists."
+    ]
+  },
+  {
+    "query": "MacBook Air suddenly shut down and won't start.",
+    "answers": [
+      "Check charger and try another outlet.",
+      "Hold Power button + Shift-Control-Option for 10s.",
+      "Visit Apple service if no signs of life."
+    ]
+  },
+  {
+    "query": "HP Envy webcam quality is very poor.",
+    "answers": [
+      "Clean the camera lens.",
+      "Update camera drivers.",
+      "Use external HD webcam if needed."
+    ]
+  },
+  {
+    "query": "MacBook Pro Safari crashing on launch.",
+    "answers": [
+      "Clear Safari cache and extensions.",
+      "Reset Safari via Terminal or Safe Mode.",
+      "Update macOS or reinstall Safari."
+    ]
+  },
+  {
+    "query": "HP Pavilion trackpad scrolling not working.",
+    "answers": [
+      "Enable scroll gesture in settings.",
+      "Reinstall Synaptics or Precision drivers.",
+      "Try external mouse to diagnose further."
+    ]
+  },
+  {
+    "query": "MacBook keyboard types random characters.",
+    "answers": [
+      "Reset SMC and NVRAM.",
+      "Check keyboard layout settings.",
+      "Check for water/dust under keys."
+    ]
+  },
+  {
+    "query": "HP Envy laptop flickers when unplugged.",
+    "answers": [
+      "Disable Panel Self Refresh in Intel Graphics settings.",
+      "Change power plan to 'High Performance'.",
+      "Update display drivers."
+    ]
+  },
+  {
+    "query": "MacBook Air won’t charge past 80%.",
+    "answers": [
+      "Battery health management feature is active.",
+      "Turn off 'Optimized Battery Charging' in settings.",
+      "Reset SMC if needed."
+    ]
+  },
+  {
+    "query": "HP Pavilion x360 hinges are loose.",
+    "answers": [
+      "Avoid forcing the screen back.",
+      "Visit HP service center for tightening/replacement.",
+      "Check warranty status."
+    ]
+  },
+  {
+    "query": "MacBook fans loud during light tasks.",
+    "answers": [
+      "Reset SMC.",
+      "Check Activity Monitor for CPU usage.",
+      "Use fan control apps like Macs Fan Control."
+    ]
+  },
+  {
+    "query": "HP Envy cannot detect printer on Wi-Fi.",
+    "answers": [
+      "Restart router and printer.",
+      "Update printer and network drivers.",
+      "Add printer manually using IP address."
+    ]
+  },
+  {
+    "query": "MacBook external SSD not mounting.",
+    "answers": [
+      "Try different USB port and cable.",
+      "Open Disk Utility to mount manually.",
+      "Reset NVRAM."
+    ]
+  },
+  {
+    "query": "HP Pavilion microphone not picking up sound.",
+    "answers": [
+      "Set correct input device in sound settings.",
+      "Reinstall audio drivers.",
+      "Test in Sound Recorder app."
+    ]
+  },
+  {
+    "query": "MacBook Air keeps logging out automatically.",
+    "answers": [
+      "Disable automatic logout in Users & Groups.",
+      "Check Energy Saver settings.",
+      "Scan for malware or rogue profiles."
+    ]
+  },
+  {
+    "query": "HP Pavilion stuck in BIOS loop.",
+    "answers": [
+      "Reset BIOS to defaults.",
+      "Disable Secure Boot and enable Legacy Boot.",
+      "Reinstall Windows using USB."
+    ]
+  },
+  {
+    "query": "MacBook Bluetooth not discovering devices.",
+    "answers": [
+      "Reset Bluetooth module using Terminal.",
+      "Remove all existing devices and retry pairing.",
+      "Restart in Safe Mode."
+    ]
+  },
+  {
+    "query": "HP Envy fan error on startup.",
+    "answers": [
+      "Check for dust buildup in vents.",
+      "Run HP hardware diagnostics.",
+      "Fan might need replacement."
+    ]
+  },
+  {
+    "query": "MacBook Touch Bar not responding.",
+    "answers": [
+      "Kill TouchBarServer process in Activity Monitor.",
+      "Reset SMC and NVRAM.",
+      "Update macOS."
+    ]
+  },
+  {
+    "query": "HP Pavilion keyboard lights flickering.",
+    "answers": [
+      "Check BIOS for keyboard settings.",
+      "Update chipset and keyboard drivers.",
+      "Test on battery vs AC."
+    ]
+  },
+  {
+    "query": "MacBook cursor disappears intermittently.",
+    "answers": [
+      "Shake trackpad/mouse to reveal.",
+      "Turn off third-party screen utilities.",
+      "Reset SMC and NVRAM."
+    ]
+  },
+  {
+    "query": "HP Envy screen bleeding at edges.",
+    "answers": [
+      "Use darker themes to mask it.",
+      "Check display panel tightness.",
+      "Replace screen if severe and under warranty."
+    ]
+  },
+  {
+    "query": "MacBook Pro lagging after Sonoma update.",
+    "answers": [
+      "Clear system cache.",
+      "Check Activity Monitor for memory usage.",
+      "Wait for Spotlight indexing to complete."
+    ]
+  },
+  {
+    "query": "HP Pavilion sound works only on headphones.",
+    "answers": [
+      "Change default playback device.",
+      "Check speaker balance settings.",
+      "Update Realtek audio drivers."
+    ]
+  },
+  {
+    "query": "MacBook stuck on login screen.",
+    "answers": [
+      "Boot into Safe Mode.",
+      "Reset password via recovery.",
+      "Use terminal to delete .AppleSetupDone if needed."
+    ]
+  },
+  {
+    "query": "HP Envy touch screen acting erratic.",
+    "answers": [
+      "Recalibrate using Control Panel.",
+      "Disable and re-enable HID device.",
+      "Clean the screen and test."
+    ]
+  },
+  {
+    "query": "MacBook apps bouncing but not opening.",
+    "answers": [
+      "Force quit and reopen.",
+      "Check disk space and update macOS.",
+      "Reset PRAM and SMC."
+    ]
+  },
+  {
+    "query": "HP Pavilion password reset loop.",
+    "answers": [
+      "Use a Windows recovery USB to reset.",
+      "Boot into safe mode and create new account.",
+      "Disable auto-login features."
+    ]
+  },
+  {
+    "query": "MacBook Air frequent spinning beach ball.",
+    "answers": [
+      "Free up storage and close background apps.",
+      "Check Activity Monitor for rogue apps.",
+      "Reinstall macOS if persistent."
+    ]
+  },
+  {
+    "query": "HP Envy screen resolution looks wrong.",
+    "answers": [
+      "Set native resolution in display settings.",
+      "Update graphics drivers.",
+      "Roll back display driver if recent update caused it."
+    ]
+  },
+  {
+    "query": "MacBook Air fan not spinning even under load.",
+    "answers": [
+      "MacBook Air uses passive cooling; no fan in M1/M2 models.",
+      "If Intel-based, reset SMC.",
+      "Check using iStat or Macs Fan Control for activity."
+    ]
+  },
+  {
+    "query": "HP Pavilion laptop doesn’t recognize USB mouse.",
+    "answers": [
+      "Try different USB port.",
+      "Update USB drivers in Device Manager.",
+      "Check mouse functionality on another PC."
+    ]
+  },
+  {
+    "query": "MacBook won’t connect to Wi-Fi after sleep.",
+    "answers": [
+      "Forget and reconnect to Wi-Fi network.",
+      "Reset Network settings.",
+      "Reset SMC and NVRAM."
+    ]
+  },
+  {
+    "query": "HP Envy laptop shuts down when unplugged.",
+    "answers": [
+      "Battery may be faulty — run HP battery check.",
+      "Update BIOS and chipset drivers.",
+      "Replace battery if issue persists."
+    ]
+  },
+  {
+    "query": "MacBook Safari videos not playing.",
+    "answers": [
+      "Disable content blockers or extensions.",
+      "Update Safari and macOS.",
+      "Clear Safari cache."
+    ]
+  },
+  {
+    "query": "HP Pavilion speakers not showing in sound settings.",
+    "answers": [
+      "Enable hidden disabled devices in Sound settings.",
+      "Reinstall Realtek audio driver.",
+      "Check if sound card is detected in Device Manager."
+    ]
+  },
+  {
+    "query": "MacBook volume keys not working.",
+    "answers": [
+      "Check System Preferences > Keyboard > Shortcuts.",
+      "Reset NVRAM.",
+      "Try using Control Center to adjust volume manually."
+    ]
+  },
+  {
+    "query": "HP Envy fingerprint not recognized after update.",
+    "answers": [
+      "Re-register fingerprint in Windows Hello.",
+      "Reinstall biometric drivers.",
+      "Update system BIOS and drivers."
+    ]
+  },
+  {
+    "query": "MacBook Pro overheating with minimal usage.",
+    "answers": [
+      "Check Activity Monitor for rogue apps.",
+      "Reset SMC.",
+      "Clean internal fans and vents."
+    ]
+  },
+  {
+    "query": "HP Pavilion won't boot from USB.",
+    "answers": [
+      "Disable Secure Boot in BIOS.",
+      "Enable Legacy Boot mode.",
+      "Ensure USB is bootable and correctly formatted."
+    ]
+  },
+  {
+    "query": "MacBook stuck on Apple logo.",
+    "answers": [
+      "Boot into macOS Recovery.",
+      "Run First Aid in Disk Utility.",
+      "Reinstall macOS if needed."
+    ]
+  },
+  {
+    "query": "HP Envy external display not detected.",
+    "answers": [
+      "Press Windows + P to cycle display modes.",
+      "Update display drivers.",
+      "Check HDMI/USB-C cable and port."
+    ]
+  },
+  {
+    "query": "MacBook trackpad click not working physically.",
+    "answers": [
+      "Check for debris or swelling battery.",
+      "Use tap-to-click as workaround.",
+      "Visit Apple support for hardware service."
+    ]
+  },
+  {
+    "query": "HP Pavilion Wi-Fi keeps disconnecting.",
+    "answers": [
+      "Update Wi-Fi adapter drivers.",
+      "Change power management settings to always on.",
+      "Reset network stack with netsh commands."
+    ]
+  },
+  {
+    "query": "MacBook brightness keys not working.",
+    "answers": [
+      "Update macOS.",
+      "Check if auto brightness is enabled.",
+      "Reset SMC and NVRAM."
+    ]
+  },
+  {
+    "query": "HP Envy stuck at HP logo screen.",
+    "answers": [
+      "Perform a hard reset.",
+      "Try booting into Safe Mode or Recovery.",
+      "Run Startup Repair from Windows Recovery."
+    ]
+  },
+  {
+    "query": "MacBook keyboard lighting not working.",
+    "answers": [
+      "Use F5/F6 keys to adjust lighting.",
+      "Enable lighting in keyboard settings.",
+      "Reset SMC."
+    ]
+  },
+  {
+    "query": "HP Pavilion laptop trackpad gestures stopped.",
+    "answers": [
+      "Check Synaptics settings in Control Panel.",
+      "Reinstall touchpad drivers.",
+      "Enable precision drivers if available."
+    ]
+  },
+  {
+    "query": "MacBook slow boot time after update.",
+    "answers": [
+      "Check Login Items in System Preferences.",
+      "Run First Aid on main disk.",
+      "Clear system cache files."
+    ]
+  },
+  {
+    "query": "HP Envy webcam not showing in apps.",
+    "answers": [
+      "Allow camera access in Windows privacy settings.",
+      "Update camera drivers.",
+      "Try the Camera app to test hardware."
+    ]
+  },
+  {
+    "query": "MacBook cannot detect AirPods.",
+    "answers": [
+      "Reset Bluetooth module.",
+      "Forget and re-pair AirPods.",
+      "Update macOS."
+    ]
+  },
+  {
+    "query": "HP Pavilion freezes randomly.",
+    "answers": [
+      "Check Event Viewer logs.",
+      "Run memory and disk checks.",
+      "Update BIOS and chipset drivers."
+    ]
+  },
+  {
+    "query": "MacBook dock not charging device.",
+    "answers": [
+      "Ensure dock firmware is updated.",
+      "Try another USB-C port.",
+      "Reset SMC."
+    ]
+  },
+  {
+    "query": "HP Envy overheating while charging.",
+    "answers": [
+      "Use original HP charger.",
+      "Clean air vents and fan.",
+      "Run HP hardware diagnostics."
+    ]
+  },
+  {
+    "query": "MacBook freezes during video calls.",
+    "answers": [
+      "Close background apps using CPU/GPU.",
+      "Switch browser or app.",
+      "Reset SMC and run Apple Diagnostics."
+    ]
+  },
+  {
+    "query": "HP Pavilion screen randomly dims.",
+    "answers": [
+      "Disable adaptive brightness.",
+      "Check Intel Graphics settings.",
+      "Adjust power plan settings."
+    ]
+  },
+  {
+    "query": "MacBook Mail app not syncing Gmail.",
+    "answers": [
+      "Remove and re-add Gmail account.",
+      "Enable IMAP in Gmail settings.",
+      "Check firewall or VPN blocking."
+    ]
+  },
+  {
+    "query": "HP Envy camera inverted image.",
+    "answers": [
+      "Use camera app settings to flip view.",
+      "Check registry for orientation correction.",
+      "Use updated camera driver."
+    ]
+  },
+  {
+    "query": "MacBook stuck verifying update package.",
+    "answers": [
+      "Restart in Safe Mode.",
+      "Delete download and retry update.",
+      "Install using macOS Recovery."
+    ]
+  },
+  {
+    "query": "HP Pavilion doesn't detect SD card.",
+    "answers": [
+      "Try another SD card.",
+      "Check Disk Management for drive letter.",
+      "Update SD card reader driver."
+    ]
+  },
+  {
+    "query": "MacBook microphone very quiet.",
+    "answers": [
+      "Increase input level in sound settings.",
+      "Reset PRAM.",
+      "Try external mic to compare."
+    ]
+  },
+  {
+    "query": "HP Envy backlit keyboard not lighting up.",
+    "answers": [
+      "Press F5 or F4 depending on model.",
+      "Check BIOS settings for keyboard lighting.",
+      "Update keyboard firmware."
+    ]
+  },
+  {
+    "query": "MacBook Safari crashing on specific sites.",
+    "answers": [
+      "Disable extensions temporarily.",
+      "Clear history and website data.",
+      "Test in Safe Mode."
+    ]
+  },
+  {
+    "query": "HP Pavilion fan too loud even at idle.",
+    "answers": [
+      "Clean vents and internal dust.",
+      "Change cooling policy in BIOS.",
+      "Run HP diagnostics for thermal issues."
+    ]
+  },
+  {
+    "query": "MacBook login screen not showing.",
+    "answers": [
+      "Reset NVRAM.",
+      "Boot into macOS Recovery and repair disk.",
+      "Check for FileVault encryption issues."
+    ]
+  },
+  {
+    "query": "HP Envy charger gets hot.",
+    "answers": [
+      "Ensure charger is HP original.",
+      "Avoid using on bed/cushions.",
+      "Check wattage compatibility."
+    ]
+  },
+  {
+    "query": "MacBook keeps asking for Apple ID.",
+    "answers": [
+      "Ensure correct credentials.",
+      "Log out and back into iCloud.",
+      "Check for keychain issues."
+    ]
+  },
+  {
+    "query": "HP Pavilion shows no boot device found.",
+    "answers": [
+      "Check BIOS boot order.",
+      "Run Startup Repair.",
+      "Reinstall OS from recovery media."
+    ]
+  },
+  {
+    "query": "MacBook cannot access external hard drive.",
+    "answers": [
+      "Change drive format to macOS-compatible.",
+      "Use Disk Utility to mount or repair.",
+      "Check USB port or adapter."
+    ]
+  },
+  {
+    "query": "HP Envy gets stuck at login screen.",
+    "answers": [
+      "Boot into Safe Mode.",
+      "Reset password using recovery disk.",
+      "Disable startup programs."
+    ]
+  },
+  {
+    "query": "MacBook volume fluctuates automatically.",
+    "answers": [
+      "Disable Sound Check in Music app.",
+      "Reset NVRAM.",
+      "Check accessibility settings."
+    ]
+  },
+  {
+    "query": "HP Pavilion battery not charging past 60%.",
+    "answers": [
+      "Battery health settings may limit max charge.",
+      "Reset BIOS battery thresholds.",
+      "Update BIOS and battery firmware."
+    ]
+  },
+  {
+    "query": "MacBook stuck on white screen at boot.",
+    "answers": [
+      "Boot into Safe Mode.",
+      "Reset SMC and NVRAM.",
+      "Use recovery to repair disk."
+    ]
+  },
+  {
+    "query": "HP Envy slow performance after Windows update.",
+    "answers": [
+      "Uninstall recent update temporarily.",
+      "Update device drivers.",
+      "Run system performance troubleshooter."
+    ]
+  },
+    {
+    "query": "MacBook battery percentage not showing on menu bar.",
+    "answers": [
+      "Go to System Settings > Control Center > Battery and enable 'Show Percentage'.",
+      "Check if battery service is running properly.",
+      "Try restarting the device."
+    ]
+  },
+  {
+    "query": "HP Pavilion stuck in automatic repair loop.",
+    "answers": [
+      "Boot into Safe Mode using Advanced Options.",
+      "Run 'chkdsk /f /r' from Command Prompt.",
+      "Perform System Restore if enabled."
+    ]
+  },
+  {
+    "query": "MacBook keyboard typing wrong characters.",
+    "answers": [
+      "Check keyboard layout settings.",
+      "Reset NVRAM.",
+      "Test external keyboard for comparison."
+    ]
+  },
+  {
+    "query": "HP Envy touchpad too sensitive.",
+    "answers": [
+      "Adjust pointer sensitivity in touchpad settings.",
+      "Disable gestures or tap to click.",
+      "Update touchpad driver."
+    ]
+  },
+  {
+    "query": "MacBook stuck on loading bar at startup.",
+    "answers": [
+      "Try booting into Safe Mode.",
+      "Use Disk Utility to verify and repair disk.",
+      "Reinstall macOS if needed."
+    ]
+  },
+  {
+    "query": "HP Pavilion won't wake from sleep.",
+    "answers": [
+      "Disable Fast Startup.",
+      "Update graphics and chipset drivers.",
+      "Change power plan to Balanced."
+    ]
+  },
+  {
+    "query": "MacBook camera green screen in Zoom.",
+    "answers": [
+      "Check camera permissions.",
+      "Reset SMC.",
+      "Try reinstalling Zoom app."
+    ]
+  },
+  {
+    "query": "HP Envy Bluetooth toggle missing.",
+    "answers": [
+      "Enable Bluetooth in BIOS if available.",
+      "Run Bluetooth troubleshooter.",
+      "Reinstall Bluetooth drivers."
+    ]
+  },
+  {
+    "query": "MacBook screen flickers when brightness is low.",
+    "answers": [
+      "Disable auto brightness.",
+      "Reset SMC and NVRAM.",
+      "Update macOS to latest version."
+    ]
+  },
+  {
+    "query": "HP Pavilion BIOS update stuck.",
+    "answers": [
+      "Wait at least 10 minutes before restarting.",
+      "Remove battery and power cycle.",
+      "Create BIOS recovery USB and reflash."
+    ]
+  },
+  {
+    "query": "MacBook fan making rattling noise.",
+    "answers": [
+      "Fan may be obstructed or damaged.",
+      "Use compressed air to clean.",
+      "Visit Apple Store for hardware check."
+    ]
+  },
+  {
+    "query": "HP Envy hard disk not detected.",
+    "answers": [
+      "Check in BIOS if disk is listed.",
+      "Re-seat hard disk physically.",
+      "Try booting from recovery media."
+    ]
+  },
+  {
+    "query": "MacBook slow internet only on Wi-Fi.",
+    "answers": [
+      "Forget network and reconnect.",
+      "Reset network settings.",
+      "Run Wireless Diagnostics tool."
+    ]
+  },
+  {
+    "query": "HP Pavilion showing lines on screen.",
+    "answers": [
+      "Connect to external display to rule out GPU issues.",
+      "Update graphics drivers.",
+      "Check for screen cable damage."
+    ]
+  },
+  {
+    "query": "MacBook screen turns off randomly.",
+    "answers": [
+      "Check Energy Saver settings.",
+      "Reset SMC.",
+      "Disable True Tone and auto-brightness."
+    ]
+  },
+  {
+    "query": "HP Envy not recognizing second monitor.",
+    "answers": [
+      "Use Windows + P to detect display.",
+      "Check cable and port connection.",
+      "Reinstall display drivers."
+    ]
+  },
+  {
+    "query": "MacBook battery service recommended.",
+    "answers": [
+      "Battery health is degraded.",
+      "Consider replacing battery.",
+      "Use Apple Diagnostics for confirmation."
+    ]
+  },
+  {
+    "query": "HP Pavilion audio stutters in headphones.",
+    "answers": [
+      "Disable audio enhancements.",
+      "Update Realtek drivers.",
+      "Try different audio port or headphones."
+    ]
+  },
+  {
+    "query": "MacBook stuck verifying iCloud login.",
+    "answers": [
+      "Sign out and back into iCloud.",
+      "Check Apple system status page.",
+      "Try logging in from a different network."
+    ]
+  },
+  {
+    "query": "HP Envy keyboard types double characters.",
+    "answers": [
+      "Lower key repeat rate in settings.",
+      "Check for dirt or debris under keys.",
+      "Update keyboard firmware/driver."
+    ]
+  },
+  {
+    "query": "MacBook can’t AirDrop files.",
+    "answers": [
+      "Ensure both devices have Wi-Fi and Bluetooth on.",
+      "Set AirDrop visibility to Everyone.",
+      "Restart both devices."
+    ]
+  },
+  {
+    "query": "HP Pavilion battery drains in sleep mode.",
+    "answers": [
+      "Disable Connected Standby.",
+      "Use Hibernate instead of Sleep.",
+      "Update power management drivers."
+    ]
+  },
+  {
+    "query": "MacBook blurry text on external monitor.",
+    "answers": [
+      "Change display scaling settings.",
+      "Use native resolution of external monitor.",
+      "Try a different display cable or adapter."
+    ]
+  },
+  {
+    "query": "HP Envy USB-C port not charging.",
+    "answers": [
+      "Not all USB-C ports support charging.",
+      "Try different charger rated for USB-PD.",
+      "Check BIOS power settings."
+    ]
+  },
+  {
+    "query": "MacBook showing 'No Entry' symbol at boot.",
+    "answers": [
+      "Startup disk is not found or not bootable.",
+      "Boot into Recovery and choose startup disk.",
+      "Reinstall macOS if needed."
+    ]
+  },
+  {
+    "query": "HP Pavilion laptop random restarts.",
+    "answers": [
+      "Check Event Viewer logs for errors.",
+      "Run memory diagnostics.",
+      "Update BIOS and chipset drivers."
+    ]
+  },
+  {
+    "query": "MacBook Photos app not importing from iPhone.",
+    "answers": [
+      "Ensure iPhone is unlocked and trusted.",
+      "Try a different USB cable or port.",
+      "Restart both MacBook and iPhone."
+    ]
+  },
+  {
+    "query": "HP Envy BIOS password forgotten.",
+    "answers": [
+      "Contact HP support with proof of ownership.",
+      "Use BIOS master reset code if available.",
+      "Replace CMOS battery if required."
+    ]
+  },
+  {
+    "query": "MacBook screen won’t rotate in Sidecar.",
+    "answers": [
+      "Update to latest macOS and iPadOS.",
+      "Disable Rotation Lock on iPad.",
+      "Reconnect Sidecar session."
+    ]
+  },
+  {
+    "query": "HP Pavilion DVD drive not opening.",
+    "answers": [
+      "Use the pinhole eject manually.",
+      "Check Device Manager for drive status.",
+      "Update or reinstall DVD driver."
+    ]
+  },
+  {
+    "query": "MacBook cannot rename files in Finder.",
+    "answers": [
+      "Check file permissions.",
+      "Restart Finder.",
+      "Try renaming from Terminal."
+    ]
+  },
+  {
+    "query": "HP Envy touch screen not working.",
+    "answers": [
+      "Check if touch screen is enabled in Device Manager.",
+      "Run hardware diagnostics.",
+      "Reinstall HID drivers."
+    ]
+  },
+  {
+    "query": "MacBook always boots into Recovery.",
+    "answers": [
+      "Check startup disk in System Settings.",
+      "Reset NVRAM.",
+      "Reinstall macOS if corrupted."
+    ]
+  },
+  {
+    "query": "HP Pavilion fan keeps running after shutdown.",
+    "answers": [
+      "Enable fast startup.",
+      "Disable wake-on-LAN and similar settings in BIOS.",
+      "Update BIOS firmware."
+    ]
+  },
+  {
+    "query": "MacBook won't detect external SSD.",
+    "answers": [
+      "Check disk format compatibility.",
+      "Try using Disk Utility to mount.",
+      "Test on another Mac or cable."
+    ]
+  },
+  {
+    "query": "HP Envy stuck in airplane mode.",
+    "answers": [
+      "Toggle airplane mode in Mobility Center.",
+      "Re-enable network adapter in Device Manager.",
+      "Reset network settings."
+    ]
+  },
+  {
+    "query": "MacBook stuck on login with spinning wheel.",
+    "answers": [
+      "Boot into Safe Mode.",
+      "Delete problematic login items.",
+      "Use Disk Utility to check disk."
+    ]
+  },
+  {
+    "query": "HP Pavilion won't enter BIOS.",
+    "answers": [
+      "Use Esc or F10 key repeatedly after power-on.",
+      "Check fast boot or secure boot settings.",
+      "Clear CMOS if necessary."
+    ]
+  },
+  {
+    "query": "MacBook App Store not loading.",
+    "answers": [
+      "Check DNS and internet settings.",
+      "Sign out and back in with Apple ID.",
+      "Delete App Store cache files."
+    ]
+  },
+  {
+    "query": "HP Envy keyboard backlight turns off too soon.",
+    "answers": [
+      "Check keyboard settings in BIOS.",
+      "Adjust timeout duration in HP Command Center.",
+      "Update firmware and software."
+    ]
+  },
+  {
+    "query": "MacBook fan always on even when idle.",
+    "answers": [
+      "Check Activity Monitor for high CPU processes.",
+      "Reset SMC.",
+      "Run Apple Diagnostics for hardware issues."
+    ]
+  },
+  {
+    "query": "HP Pavilion has ghost touches on screen.",
+    "answers": [
+      "Clean screen thoroughly.",
+      "Update touchscreen driver.",
+      "Disable and re-enable HID-compliant touch device."
+    ]
+  },
+  {
+    "query": "MacBook Time Machine backup stuck preparing.",
+    "answers": [
+      "Delete .inProgress file in backup drive.",
+      "Restart Time Machine process.",
+      "Exclude large folders temporarily."
+    ]
+  },
+  {
+    "query": "HP Envy charging port loose.",
+    "answers": [
+      "Try different charger.",
+      "Avoid wiggling during use.",
+      "Get port repaired by service center."
+    ]
+  },
+  {
+    "query": "MacBook login screen resolution too low.",
+    "answers": [
+      "Reset NVRAM.",
+      "Ensure FileVault is enabled (sometimes causes low-res login).",
+      "Check for display scaling changes after update."
+    ]
+  },
+    {
+    "query": "Lenovo laptop not detecting HDMI output.",
+    "answers": [
+      "Check display mode (Windows + P).",
+      "Try a different HDMI cable.",
+      "Update display and chipset drivers."
+    ]
+  },
+  {
+    "query": "Dell Inspiron not turning on even when plugged in.",
+    "answers": [
+      "Hold power button for 30 seconds to discharge.",
+      "Try different power adapter.",
+      "Check if charging LED turns on."
+    ]
+  },
+  {
+    "query": "Acer laptop stuck at logo screen.",
+    "answers": [
+      "Try entering BIOS (F2).",
+      "Reset BIOS to default.",
+      "Check for boot device order issues."
+    ]
+  },
+  {
+    "query": "Lenovo ThinkPad fingerprint scanner not working.",
+    "answers": [
+      "Update fingerprint driver in Device Manager.",
+      "Re-register fingerprints in Windows Hello.",
+      "Restart Windows Biometric service."
+    ]
+  },
+  {
+    "query": "Dell XPS heating up quickly.",
+    "answers": [
+      "Check background processes.",
+      "Clean internal fans.",
+      "Update BIOS and thermal drivers."
+    ]
+  },
+  {
+    "query": "Acer laptop battery not charging past 80%.",
+    "answers": [
+      "Check if battery preservation mode is enabled.",
+      "Disable battery limiter in Acer Care Center.",
+      "Update BIOS if needed."
+    ]
+  },
+  {
+    "query": "Lenovo camera showing black screen.",
+    "answers": [
+      "Enable camera with F8 or privacy shutter.",
+      "Check permissions in privacy settings.",
+      "Reinstall camera driver."
+    ]
+  },
+  {
+    "query": "Dell laptop trackpad not responding.",
+    "answers": [
+      "Check if disabled in BIOS or Function key.",
+      "Update or reinstall touchpad driver.",
+      "Try using an external mouse."
+    ]
+  },
+  {
+    "query": "Asus laptop microphone not working.",
+    "answers": [
+      "Enable mic access in Privacy settings.",
+      "Update audio driver.",
+      "Run Windows Troubleshooter."
+    ]
+  },
+  {
+    "query": "Lenovo laptop fan runs constantly.",
+    "answers": [
+      "Clean dust from vents.",
+      "Change thermal mode in Lenovo Vantage.",
+      "Reset BIOS settings."
+    ]
+  },
+  {
+    "query": "HP laptop caps lock light blinking 5 times.",
+    "answers": [
+      "Indicates motherboard failure.",
+      "Try power cycle and reseat RAM.",
+      "Contact HP support."
+    ]
+  },
+  {
+    "query": "MacBook external keyboard not detected.",
+    "answers": [
+      "Check keyboard compatibility.",
+      "Reset SMC and PRAM.",
+      "Test on another USB port or device."
+    ]
+  },
+  {
+    "query": "Asus laptop screen randomly turns black.",
+    "answers": [
+      "Update graphics drivers.",
+      "Disable fast startup.",
+      "Check display cable if under warranty."
+    ]
+  },
+  {
+    "query": "Dell keyboard backlight not working.",
+    "answers": [
+      "Press Fn + F10 or dedicated light key.",
+      "Enable backlight in BIOS settings.",
+      "Install Dell Quickset utility."
+    ]
+  },
+  {
+    "query": "Acer laptop freezes on battery power.",
+    "answers": [
+      "Update power management drivers.",
+      "Reset battery via pinhole (if available).",
+      "Check for battery firmware update."
+    ]
+  },
+  {
+    "query": "Lenovo stuck on Lenovo logo screen.",
+    "answers": [
+      "Try entering BIOS and load defaults.",
+      "Unplug all USB devices and reboot.",
+      "Perform recovery from bootable USB."
+    ]
+  },
+  {
+    "query": "Dell loud beeping sound at startup.",
+    "answers": [
+      "Beep codes indicate hardware issue.",
+      "Count beeps and refer to Dell support.",
+      "Run diagnostics (F12 on boot)."
+    ]
+  },
+  {
+    "query": "Asus laptop keyboard not typing certain keys.",
+    "answers": [
+      "Check for stuck keys or debris.",
+      "Update keyboard drivers.",
+      "Try external keyboard to isolate problem."
+    ]
+  },
+  {
+    "query": "Lenovo laptop built-in speakers not working.",
+    "answers": [
+      "Check output device in sound settings.",
+      "Update audio drivers.",
+      "Try audio troubleshooter."
+    ]
+  },
+  {
+    "query": "MacBook not recognizing iPhone for tethering.",
+    "answers": [
+      "Trust device prompt must be accepted.",
+      "Enable Personal Hotspot on iPhone.",
+      "Use original Apple cable."
+    ]
+  },
+  {
+    "query": "HP Pavilion touchpad gestures not working.",
+    "answers": [
+      "Enable gestures in touchpad settings.",
+      "Reinstall Synaptics or Precision driver.",
+      "Check for Windows updates."
+    ]
+  },
+  {
+    "query": "Lenovo Legion stuck in BIOS loop.",
+    "answers": [
+      "Check boot device settings.",
+      "Disable Fast Boot.",
+      "Reinstall Windows using recovery media."
+    ]
+  },
+  {
+    "query": "Dell G15 performance throttled while gaming.",
+    "answers": [
+      "Ensure thermal profiles are set to Performance.",
+      "Clean internal dust.",
+      "Update GPU drivers and BIOS."
+    ]
+  },
+  {
+    "query": "Acer Nitro fan not spinning at all.",
+    "answers": [
+      "Check NitroSense fan profile.",
+      "Update BIOS.",
+      "Test with heavy load to trigger fan."
+    ]
+  },
+  {
+    "query": "Asus Vivobook screen shows flickering lines.",
+    "answers": [
+      "Update Intel or Nvidia drivers.",
+      "Disable Panel Self Refresh (Intel Settings).",
+      "Check with external monitor."
+    ]
+  },
+  {
+    "query": "MacBook gets hot while charging.",
+    "answers": [
+      "Normal during heavy use.",
+      "Avoid using on bed or soft surface.",
+      "Check Activity Monitor for CPU spikes."
+    ]
+  },
+  {
+    "query": "HP laptop shows 'No Boot Device Found'.",
+    "answers": [
+      "Check BIOS for boot priority.",
+      "Reseat hard drive.",
+      "Run diagnostics from BIOS."
+    ]
+  },
+  {
+    "query": "Lenovo ThinkBook brightness keys not working.",
+    "answers": [
+      "Install Lenovo Hotkeys software.",
+      "Update display and chipset drivers.",
+      "Try Windows Brightness slider."
+    ]
+  },
+  {
+    "query": "Dell Latitude loud coil whine noise.",
+    "answers": [
+      "Use Quiet charging mode in BIOS.",
+      "Update BIOS firmware.",
+      "Consider motherboard replacement if excessive."
+    ]
+  },
+  {
+    "query": "MacBook stuck on Apple logo after update.",
+    "answers": [
+      "Try Safe Mode.",
+      "Boot into Recovery and reinstall macOS.",
+      "Restore from Time Machine backup."
+    ]
+  },
+  {
+    "query": "Asus ROG keyboard RGB not syncing.",
+    "answers": [
+      "Use Armoury Crate software.",
+      "Update firmware and Aura Sync.",
+      "Restart RGB service."
+    ]
+  },
+  {
+    "query": "HP BIOS update failed.",
+    "answers": [
+      "Try BIOS recovery from USB.",
+      "Disconnect power and retry.",
+      "Contact HP support if bricked."
+    ]
+  },
+  {
+    "query": "Lenovo laptop screen very dim even at full brightness.",
+    "answers": [
+      "Disable adaptive brightness.",
+      "Check GPU drivers.",
+      "Reset power settings."
+    ]
+  },
+  {
+    "query": "Dell laptop boot time very slow.",
+    "answers": [
+      "Disable startup apps.",
+      "Enable Fast Boot.",
+      "Check disk health with CrystalDiskInfo."
+    ]
+  },
+  {
+    "query": "MacBook stuck in reboot loop.",
+    "answers": [
+      "Reset SMC and NVRAM.",
+      "Boot into Safe Mode.",
+      "Reinstall macOS."
+    ]
+  },
+  {
+    "query": "Acer laptop built-in mic not working in Zoom.",
+    "answers": [
+      "Check Zoom audio input settings.",
+      "Allow microphone access in system settings.",
+      "Reinstall audio drivers."
+    ]
+  },
+  {
+    "query": "Lenovo trackpoint not working.",
+    "answers": [
+      "Enable it in BIOS.",
+      "Update UltraNav or pointing device driver.",
+      "Check Lenovo Vantage settings."
+    ]
+  },
+  {
+    "query": "Asus TUF charging stuck at 60%.",
+    "answers": [
+      "Battery Health Charging enabled in MyAsus.",
+      "Set to Full Capacity Mode.",
+      "Restart device after changes."
+    ]
+  },
+  {
+    "query": "MacBook FaceTime camera not working.",
+    "answers": [
+      "Close other apps using the camera.",
+      "Check permissions in Security settings.",
+      "Reset SMC."
+    ]
+  },
+  {
+    "query": "HP Spectre speaker cracking sound.",
+    "answers": [
+      "Disable audio enhancements.",
+      "Update Realtek or Bang & Olufsen driver.",
+      "Check for BIOS audio patches."
+    ]
+  },
+  {
+    "query": "Dell laptop won’t connect to Wi-Fi automatically.",
+    "answers": [
+      "Forget and reconnect to network.",
+      "Enable auto-connect option.",
+      "Update wireless adapter driver."
+    ]
+  },
+  {
+    "query": "Lenovo Yoga 2-in-1 stuck in tablet mode.",
+    "answers": [
+      "Toggle Tablet mode in Action Center.",
+      "Update sensor drivers.",
+      "Restart Explorer process."
+    ]
+  },
+  {
+    "query": "Asus ZenBook screen goes black randomly.",
+    "answers": [
+      "Disable fast startup.",
+      "Check Intel graphics settings.",
+      "Update BIOS."
+    ]
+  },
+  {
+    "query": "MacBook can't open Safari pages.",
+    "answers": [
+      "Clear cache and history.",
+      "Disable content blockers.",
+      "Try different DNS settings (like 1.1.1.1)."
+    ]
+  },
+    {
+    "query": "My HP Pavilion x360 screen flickers when switching between battery and AC power.",
+    "answers": [
+      "Update your Intel graphics driver using HP Support Assistant.",
+      "Disable Panel Self Refresh in Intel Graphics Command Center.",
+      "Try changing the refresh rate to 60Hz in display settings."
+    ]
+  },
+  {
+    "query": "HP Envy 13 overheats even with minimal usage.",
+    "answers": [
+      "Clean the internal fans and vents using compressed air.",
+      "Update BIOS and chipset drivers from HP's official site.",
+      "Disable background apps and switch to battery saver mode."
+    ]
+  },
+  {
+    "query": "MacBook Air (M1) webcam not working on Zoom.",
+    "answers": [
+      "Ensure Zoom has permission to access the camera in System Preferences > Security & Privacy.",
+      "Restart Zoom and check if other apps are using the camera.",
+      "Try reinstalling Zoom with the latest M1-compatible version."
+    ]
+  },
+  {
+    "query": "MacBook Pro (M2) trackpad becomes unresponsive randomly.",
+    "answers": [
+      "Reset SMC and NVRAM.",
+      "Boot in safe mode to check for third-party software conflict.",
+      "Disable force-click temporarily from System Preferences > Trackpad."
+    ]
+  },
+  {
+    "query": "HP Pavilion x360 WiFi drops frequently when connected to home network.",
+    "answers": [
+      "Update WiFi drivers using the Intel support tool.",
+      "Set your WiFi adapter’s power setting to maximum performance.",
+      "Forget and reconnect to the WiFi network after rebooting the router."
+    ]
+  },
+  {
+    "query": "HP Envy 13 keyboard backlight not working.",
+    "answers": [
+      "Press F5 or the dedicated backlight key.",
+      "Enable 'Action Keys Mode' in BIOS.",
+      "Update keyboard drivers in Device Manager."
+    ]
+  },
+  {
+    "query": "MacBook Air (M1) cannot detect external display via HDMI.",
+    "answers": [
+      "Use a certified USB-C to HDMI adapter that supports DisplayPort Alt Mode.",
+      "Ensure the display is set to the correct input source.",
+      "Reset NVRAM and check Display settings."
+    ]
+  },
+  {
+    "query": "MacBook Pro (M2) battery drains fast after macOS update.",
+    "answers": [
+      "Open Activity Monitor and kill apps consuming high energy.",
+      "Disable background syncs like iCloud Drive temporarily.",
+      "Reset SMC and ensure system is updated again post-install."
+    ]
+  },
+  {
+    "query": "HP Pavilion x360 audio crackling with headphones plugged in.",
+    "answers": [
+      "Update Realtek audio drivers.",
+      "Set default audio format to 24-bit in Sound settings.",
+      "Disable audio enhancements from control panel."
+    ]
+  },
+  {
+    "query": "MacBook Air (M1) not charging when plugged in.",
+    "answers": [
+      "Try using a different USB-C cable and charger.",
+      "Inspect the charging port for dust or damage.",
+      "Reset SMC to resolve power delivery issues."
+    ]
+  },
+  {
+    "query": "HP Envy 13 camera is blurry on video calls.",
+    "answers": [
+      "Clean the camera lens with a microfiber cloth.",
+      "Increase the resolution in the video conferencing app settings.",
+      "Ensure lighting is adequate to prevent auto-blur."
+    ]
+  },
+  {
+    "query": "MacBook Pro (M2) showing artifacts on screen after sleep.",
+    "answers": [
+      "Update macOS to latest stable release.",
+      "Reset NVRAM and SMC.",
+      "Run Apple Diagnostics for potential hardware issues."
+    ]
+  },
+  {
+    "query": "HP Pavilion x360 touch screen not responding.",
+    "answers": [
+      "Reinstall HID-compliant touch screen driver.",
+      "Calibrate the touch screen from Tablet PC settings.",
+      "Check for Windows updates or rollback recent ones."
+    ]
+  },
+  {
+    "query": "MacBook Air (M1) Bluetooth keeps disconnecting from AirPods.",
+    "answers": [
+      "Forget and reconnect the AirPods from Bluetooth settings.",
+      "Reset Bluetooth module using debug option.",
+      "Ensure AirPods firmware is up-to-date."
+    ]
+  },
+  {
+    "query": "MacBook Pro (M2) fans spinning loudly with low CPU usage.",
+    "answers": [
+      "Check Activity Monitor for background tasks.",
+      "Reset SMC to recalibrate thermal management.",
+      "Use CleanMyMac to clean up background agents."
+    ]
+  },
+  {
+    "query": "HP Envy 13 brightness keys not working.",
+    "answers": [
+      "Install the HP Quick Launch Button driver.",
+      "Enable hotkeys in BIOS settings.",
+      "Update graphics and keyboard drivers."
+    ]
+  },
+  {
+    "query": "HP Pavilion x360 screen rotates automatically even when I don’t want it to.",
+    "answers": [
+      "Turn off auto-rotate in Action Center.",
+      "Disable sensor monitoring from registry (for advanced users).",
+      "Lock screen orientation from display settings."
+    ]
+  },
+  {
+    "query": "MacBook Air (M1) mail app freezes after waking from sleep.",
+    "answers": [
+      "Rebuild mailbox index in Mail app preferences.",
+      "Remove and re-add mail accounts one by one.",
+      "Ensure Spotlight indexing is complete."
+    ]
+  },
+  {
+    "query": "MacBook Pro (M2) unable to install Rosetta 2.",
+    "answers": [
+      "Run the terminal command: `/usr/sbin/softwareupdate --install-rosetta --agree-to-license`",
+      "Ensure you're connected to the internet.",
+      "Restart the device after Rosetta installation."
+    ]
+  },
+  {
+    "query": "HP Envy 13 doesn’t recognize second monitor via HDMI.",
+    "answers": [
+      "Ensure display output is set to 'Extend'.",
+      "Check with different HDMI cable and port.",
+      "Update Intel UHD graphics driver."
+    ]
+  },
+    {
+    "query": "MacBook Air (M1) screen goes black randomly while working.",
+    "answers": [
+      "Disable 'Automatic Graphics Switching' from battery settings.",
+      "Update macOS to the latest version.",
+      "Reset NVRAM and SMC to clear display configurations."
+    ]
+  },
+  {
+    "query": "HP Pavilion x360 pen input lagging in drawing applications.",
+    "answers": [
+      "Install the latest touchscreen firmware from HP.",
+      "Disable Windows Ink in the drawing app if it causes lag.",
+      "Ensure palm rejection is enabled and background apps are closed."
+    ]
+  },
+  {
+    "query": "MacBook Pro (M2) Thunderbolt ports not recognizing external SSD.",
+    "answers": [
+      "Use a certified Thunderbolt 4 cable.",
+      "Ensure external drive is formatted in APFS or exFAT if cross-compatible.",
+      "Check System Report > Thunderbolt to verify hardware recognition."
+    ]
+  },
+  {
+    "query": "HP Envy 13 slow boot even after SSD upgrade.",
+    "answers": [
+      "Disable Fast Boot in BIOS.",
+      "Enable AHCI mode for SSD.",
+      "Reduce startup programs using Task Manager."
+    ]
+  },
+  {
+    "query": "MacBook Air (M1) terminal shows zsh errors after update.",
+    "answers": [
+      "Run `source ~/.zshrc` to reload config.",
+      "Check for corrupt plugins in `.oh-my-zsh` or custom themes.",
+      "Remove broken aliases or syntax in `.zshrc` file."
+    ]
+  },
+  {
+    "query": "HP Pavilion x360 fan runs constantly even when idle.",
+    "answers": [
+      "Clean the vents and check thermal paste.",
+      "Check Task Manager for CPU hogging background apps.",
+      "Update BIOS for thermal curve improvements."
+    ]
+  },
+  {
+    "query": "MacBook Pro (M2) Messages app won’t sync with iPhone.",
+    "answers": [
+      "Ensure iCloud syncing is turned on in both devices.",
+      "Check that both use the same Apple ID and are signed into iMessage.",
+      "Reset sync by toggling Messages in iCloud off and back on."
+    ]
+  },
+  {
+    "query": "HP Envy 13 shows battery plugged in but not charging.",
+    "answers": [
+      "Unplug and remove battery, then reconnect after 30 seconds.",
+      "Run HP Battery Check utility.",
+      "Update battery firmware via HP Support Assistant."
+    ]
+  },
+  {
+    "query": "MacBook Air (M1) screen flickers in low brightness.",
+    "answers": [
+      "Disable True Tone and automatic brightness.",
+      "Reset SMC to recalibrate display controls.",
+      "Update to latest stable macOS to patch known flickering bugs."
+    ]
+  },
+  {
+    "query": "HP Pavilion x360 cannot connect to Bluetooth devices after Windows update.",
+    "answers": [
+      "Uninstall and reinstall Bluetooth drivers.",
+      "Run Bluetooth troubleshooter from Windows settings.",
+      "Check if airplane mode is toggled via keyboard by accident."
+    ]
+  },
+  {
+    "query": "MacBook Pro (M2) keyboard backlight turns off randomly.",
+    "answers": [
+      "Adjust auto-dimming settings in System Preferences > Keyboard.",
+      "Reset SMC to fix ambient sensor misbehavior.",
+      "Ensure there are no conflicting third-party brightness apps."
+    ]
+  },
+  {
+    "query": "HP Envy 13 touchpad gestures stopped working.",
+    "answers": [
+      "Enable multi-finger gestures in Windows Touchpad settings.",
+      "Reinstall Synaptics or Precision Touchpad drivers.",
+      "Check if touchpad is disabled via Function keys."
+    ]
+  },
+  {
+    "query": "MacBook Air (M1) Safari keeps crashing on certain websites.",
+    "answers": [
+      "Clear Safari cache and cookies.",
+      "Disable all Safari extensions temporarily.",
+      "Update Safari or switch to Chrome if persistent."
+    ]
+  },
+  {
+    "query": "HP Pavilion x360 audio not working after sleep mode.",
+    "answers": [
+      "Restart Windows Audio service from Services.",
+      "Update Realtek or Conexant audio drivers.",
+      "Disable 'Allow computer to turn off this device' in audio settings."
+    ]
+  },
+  {
+    "query": "MacBook Pro (M2) external monitor resolution stuck at 1080p.",
+    "answers": [
+      "Use SwitchResX to force higher resolution.",
+      "Try a different USB-C to HDMI/DP adapter.",
+      "Check display EDID detection in System Information > Graphics."
+    ]
+  },
+  {
+    "query": "HP Envy 13 display looks washed out on battery.",
+    "answers": [
+      "Disable display power saving features in Intel Graphics settings.",
+      "Use Windows Color Calibration to adjust gamma and brightness.",
+      "Ensure HDR is turned off if unsupported by display."
+    ]
+  },
+  {
+    "query": "MacBook Air (M1) kernel_task using high CPU.",
+    "answers": [
+      "Check for overheating causing thermal throttling.",
+      "Unplug accessories that may affect power delivery.",
+      "Reset SMC and update macOS."
+    ]
+  },
+  {
+    "query": "HP Pavilion x360 not detecting USB pen drive.",
+    "answers": [
+      "Try using a different USB port.",
+      "Uninstall USB controllers and restart PC.",
+      "Check drive in Disk Management and assign a new letter."
+    ]
+  },
+  {
+    "query": "MacBook Pro (M2) App Store stuck on 'Waiting' forever.",
+    "answers": [
+      "Sign out and back into App Store.",
+      "Clear App Store cache using `defaults delete com.apple.appstore`.",
+      "Check network DNS settings and try using Google DNS (8.8.8.8)."
+    ]
+  },
+  {
+    "query": "HP Envy 13 can't access BitLocker recovery key.",
+    "answers": [
+      "Log in to your Microsoft account online to retrieve the recovery key.",
+      "Check if it was saved to a USB drive or printed.",
+      "Use command `manage-bde -protectors -get C:` in cmd to verify status."
+    ]
+  }
+]
