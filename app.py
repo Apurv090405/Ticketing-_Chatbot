@@ -1,9 +1,7 @@
 import streamlit as st
-from graph import app as langgraph_app
+from agents.graph import app as langgraph_app
 from db import db
 import uuid
-import json
-import os
 
 st.title("AI Ticketing Platform")
 
@@ -17,10 +15,15 @@ if "state" not in st.session_state:
         "query": "",
         "result": {},
         "message": "",
-        "step": "username"
+        "step": "username",
+        "output_display": None  # To persist output
     }
-if "graph_output" not in st.session_state:
-    st.session_state.graph_output = None
+
+# Function to update state and run graph
+def run_graph(state):
+    output = langgraph_app.invoke(state)
+    st.session_state.state.update(output)
+    return output
 
 # Step 1: Username input
 if st.session_state.state["step"] == "username":
@@ -28,9 +31,8 @@ if st.session_state.state["step"] == "username":
     if st.button("Submit Username"):
         if username:
             st.session_state.state["username"] = username
-            output = langgraph_app.invoke(st.session_state.state)
-            st.session_state.graph_output = output
-            st.session_state.state = output
+            output = run_graph(st.session_state.state)
+            st.session_state.state["output_display"] = output
             if output["customer"]:
                 st.success(f"Welcome, {output['customer']['name']}!")
                 st.session_state.state["step"] = "laptop_select"
@@ -132,9 +134,8 @@ if st.session_state.state["step"] == "query_process":
     if st.button("Submit Query"):
         if query:
             st.session_state.state["query"] = query
-            output = langgraph_app.invoke(st.session_state.state)
-            st.session_state.graph_output = output
-            st.session_state.state = output
+            output = run_graph(st.session_state.state)
+            st.session_state.state["output_display"] = output
             if output["result"].get("solution"):
                 st.success("Solution found!")
                 st.write("**Solution**:")
@@ -147,6 +148,15 @@ if st.session_state.state["step"] == "query_process":
                 st.info("Your query has been noted. We will follow up soon.")
         else:
             st.error("Please enter a query.")
+
+# Display persisted output if available
+if st.session_state.state["output_display"]:
+    output = st.session_state.state["output_display"]
+    if output.get("message") and st.session_state.state["step"] in ["username", "register"]:
+        if "found" in output["message"]:
+            st.success(output["message"])
+        else:
+            st.warning(output["message"])
 
 if __name__ == "__main__":
     st.write("AI Ticketing Platform ready.")

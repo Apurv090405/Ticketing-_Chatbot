@@ -72,13 +72,12 @@ Based on the user query, provided tickets, and web search results (if any), gene
 
     def _web_search(self, query):
         try:
-            # Simple web search using a public API (e.g., DuckDuckGo)
             url = f"https://api.duckduckgo.com/?q={query}&format=json"
             response = requests.get(url)
             data = response.json()
             results = data.get("RelatedTopics", [])
             web_content = ""
-            for result in results[:3]:  # Limit to top 3 results
+            for result in results[:3]:
                 if "Text" in result:
                     web_content += result["Text"] + "\n"
             return web_content if web_content else None
@@ -114,14 +113,13 @@ Based on the user query, provided tickets, and web search results (if any), gene
     def generate_solution_with_web(self, query, customer, laptop_id):
         try:
             web_content = self._web_search(query)
-            matched_tickets = []  # No matches, so empty
+            matched_tickets = []
             laptop = next((l for l in customer["laptops"] if l["laptop_id"] == laptop_id), None)
             if laptop:
                 query_with_context = f"{query} for {laptop['name']} {laptop['model']}"
             else:
                 query_with_context = query
             solution = self._generate_gemini_solution(query_with_context, matched_tickets, web_content)
-            # Save new query to JSON file
             new_query = {
                 "query": query,
                 "laptop_id": laptop_id,

@@ -35,7 +35,6 @@ class Database:
             if not tickets:
                 print("No tickets found in the database.")
                 return []
-            # Add ticket_id if missing, using _id as fallback
             for ticket in tickets:
                 if "ticket_id" not in ticket:
                     ticket["ticket_id"] = str(ticket["_id"])
@@ -52,6 +51,14 @@ class Database:
             return ticket
         except Exception as e:
             print(f"Error fetching ticket by query: {e}")
+            return None
+
+    def add_ticket(self, ticket):
+        try:
+            result = self.tickets_collection.insert_one(ticket)
+            return result.inserted_id
+        except Exception as e:
+            print(f"Error adding ticket: {e}")
             return None
 
 db = Database()
