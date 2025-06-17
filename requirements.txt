@@ -1,0 +1,10 @@
+streamlit
+pymongo
+langchain
+langchain-community
+langchain_google_genai
+faiss-cpu
+python-dotenv
+google-generativeai
+langgraph
+duckduckgo-search
