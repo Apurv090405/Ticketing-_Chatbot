@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 import os
 import json
 import requests
-from bs4 import BeautifulSoup
+import uuid
 
 load_dotenv()
 
@@ -62,7 +62,7 @@ User Query: {user_query}
 The following are related tickets from the database:
 {ticket_details}
 {web_info}
-Based on the user query, provided tickets, and web search results (if any), generate a concise and accurate solution to the user's issue.
+Based on the user query, provided tickets, and web search results (if any), generate a concise and accurate solution to the user's issue. Also make sure it is same as the example format given in the prompt like 3-4 lines and each line should not exceed 10 words.
 """
             response = self.gemini_model.generate_content(prompt)
             return response.text.strip()
@@ -85,10 +85,48 @@ Based on the user query, provided tickets, and web search results (if any), gene
             print(f"Error during web search: {e}")
             return None
 
-    def retrieve(self, query, k=3):
+    def _save_to_db(self, query, solution, customer, laptop_id):
+        try:
+            ticket = {
+                "ticket_id": f"TICK{str(uuid.uuid4())[:8]}",
+                "customer_id": customer["customer_id"],
+                "laptop_id": laptop_id,
+                "query": query,
+                "answers": [solution]
+            }
+            db.add_ticket(ticket)
+        except Exception as e:
+            print(f"Error saving to database: {e}")
+
+    def _save_to_json(self, query_data):
+        try:
+            json_file = "new_queries.json"
+            queries = []
+            if os.path.exists(json_file):
+                with open(json_file, "r") as f:
+                    queries = json.load(f)
+            queries.append(query_data)
+            with open(json_file, "w") as f:
+                json.dump(queries, f, indent=2)
+        except Exception as e:
+            print(f"Error saving to JSON: {e}")
+
+    def retrieve(self, query, customer, laptop_id, k=3):
         try:
             if not self.vector_store:
-                return {"message": "No tickets available in the database."}
+                solution = self._generate_gemini_solution(query, [])
+                self._save_to_db(query, solution, customer, laptop_id)
+                self._save_to_json({
+                    "query": query,
+                    "laptop_id": laptop_id,
+                    "customer_id": customer["customer_id"],
+                    "solution": solution
+                })
+                return {
+                    "query": query,
+                    "solution": solution,
+                    "references": []
+                }
             results = self.vector_store.similarity_search_with_score(query, k=k)
             matched_tickets = [
                 {
@@ -98,9 +136,14 @@ Based on the user query, provided tickets, and web search results (if any), gene
                 }
                 for doc, score in results if score <= 0.80
             ]
-            if not matched_tickets:
-                return {"message": "No matching query found."}
             solution = self._generate_gemini_solution(query, matched_tickets)
+            self._save_to_db(query, solution, customer, laptop_id)
+            self._save_to_json({
+                "query": query,
+                "laptop_id": laptop_id,
+                "customer_id": customer["customer_id"],
+                "solution": solution
+            })
             return {
                 "query": query,
                 "solution": solution,
@@ -118,15 +161,15 @@ Based on the user query, provided tickets, and web search results (if any), gene
             if laptop:
                 query_with_context = f"{query} for {laptop['name']} {laptop['model']}"
             else:
-                query_with_context = query
+                queried_with_context = query
             solution = self._generate_gemini_solution(query_with_context, matched_tickets, web_content)
-            new_query = {
+            self._save_to_db(query, solution, customer, laptop_id)
+            self._save_to_json({
                 "query": query,
                 "laptop_id": laptop_id,
                 "customer_id": customer["customer_id"],
                 "solution": solution
-            }
-            self._save_to_json(new_query)
+            })
             return {
                 "query": query,
                 "solution": solution,
@@ -135,18 +178,5 @@ Based on the user query, provided tickets, and web search results (if any), gene
         except Exception as e:
             print(f"Error generating solution with web search: {e}")
             return {"message": "Unable to generate a solution at this time."}
-
-    def _save_to_json(self, query_data):
-        try:
-            json_file = "new_queries.json"
-            queries = []
-            if os.path.exists(json_file):
-                with open(json_file, "r") as f:
-                    queries = json.load(f)
-            queries.append(query_data)
-            with open(json_file, "w") as f:
-                json.dump(queries, f, indent=2)
-        except Exception as e:
-            print(f"Error saving to JSON: {e}")
 
 rag_pipeline = RAGPipeline()

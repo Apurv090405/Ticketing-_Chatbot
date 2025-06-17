@@ -10,6 +10,10 @@ def ticket_agent(state):
     if not query or not customer or not laptop_id or not result:
         return {"message": "Cannot save ticket: missing data", "step": "ticket_save"}
     
+    # Ticket already saved in rag.py, so skip if solution exists
+    if result.get("solution"):
+        return {"message": "Ticket already saved", "step": "ticket_save"}
+    
     ticket = {
         "ticket_id": f"TICK{str(uuid.uuid4())[:8]}",
         "customer_id": customer["customer_id"],

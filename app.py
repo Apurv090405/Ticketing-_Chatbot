@@ -1,7 +1,8 @@
 import streamlit as st
-from agents.graph import app as langgraph_app
+from graph import app as langgraph_app
 from db import db
 import uuid
+import time
 
 st.title("AI Ticketing Platform")
 
@@ -12,46 +13,53 @@ if "state" not in st.session_state:
         "customer": None,
         "new_user": False,
         "laptop_id": None,
+        "laptop_details": None,
         "query": "",
         "result": {},
         "message": "",
         "step": "username",
-        "output_display": None  # To persist output
+        "output_history": []  # Store all messages
     }
 
-# Function to update state and run graph
+# Function to add message to output history
+def add_to_output_history(message, type="user"):
+    timestamp = time.time()
+    # Avoid duplicates
+    if not any(entry["message"] == message and entry["type"] == type for entry in st.session_state.state["output_history"]):
+        st.session_state.state["output_history"].append({"message": message, "type": type, "timestamp": timestamp})
+
+# Function to run graph and update state
 def run_graph(state):
     output = langgraph_app.invoke(state)
     st.session_state.state.update(output)
+    if output.get("message"):
+        add_to_output_history(output["message"], "system " + ("success" if "found" in output["message"] or "saved" in output["message"] else "warning"))
     return output
 
-# Step 1: Username input
-if st.session_state.state["step"] == "username":
-    username = st.text_input("Enter your username:")
-    if st.button("Submit Username"):
+# Handle button actions in sidebar
+with st.sidebar:
+    if st.session_state.state["step"] == "username" and st.button("Send", key="username_send"):
+        username = st.session_state.get("username_input", "")
         if username:
             st.session_state.state["username"] = username
+            add_to_output_history(f"Username: {username}")
             output = run_graph(st.session_state.state)
-            st.session_state.state["output_display"] = output
             if output["customer"]:
-                st.success(f"Welcome, {output['customer']['name']}!")
                 st.session_state.state["step"] = "laptop_select"
             elif output["new_user"]:
-                st.warning("User not found. Please register.")
                 st.session_state.state["step"] = "register"
+            st.rerun()
         else:
-            st.error("Please enter a username.")
+            add_to_output_history("Please enter a username.", "system error")
+            st.rerun()
 
-# Step 2: New user registration
-if st.session_state.state["step"] == "register":
-    st.subheader("Register New User")
-    name = st.text_input("Full Name:")
-    laptop_name = st.text_input("Laptop Name (e.g., HP Pavilion x360):")
-    laptop_model = st.text_input("Laptop Model (e.g., 14-dw1036TU):")
-    cpu = st.text_input("CPU (e.g., Intel i5-1135G7):")
-    ram = st.text_input("RAM (e.g., 8GB):")
-    storage = st.text_input("Storage (e.g., 512GB SSD):")
-    if st.button("Register"):
+    if st.session_state.state["step"] == "register" and st.button("Register", key="register"):
+        name = st.session_state.get("name", "")
+        laptop_name = st.session_state.get("laptop_name", "")
+        laptop_model = st.session_state.get("laptop_model", "")
+        cpu = st.session_state.get("cpu", "")
+        ram = st.session_state.get("ram", "")
+        storage = st.session_state.get("storage", "")
         if all([name, laptop_name, laptop_model, cpu, ram, storage]):
             customer = {
                 "username": st.session_state.state["username"],
@@ -72,28 +80,22 @@ if st.session_state.state["step"] == "register":
                 st.session_state.state["customer"] = customer
                 st.session_state.state["new_user"] = False
                 st.session_state.state["step"] = "laptop_select"
-                st.success("Registration successful!")
+                add_to_output_history(f"Registered: {name} with {laptop_name} ({laptop_model})")
+                add_to_output_history("Registration successful!", "system success")
             else:
-                st.error("Failed to register. Try again.")
+                add_to_output_history("Failed to register. Try again.", "system error")
+            st.rerun()
         else:
-            st.error("Please fill all fields.")
+            add_to_output_history("Please fill all fields.", "system error")
+            st.rerun()
 
-# Step 3: Laptop selection
-if st.session_state.state["step"] == "laptop_select":
-    st.subheader("Select Your Laptop")
-    laptops = st.session_state.state["customer"]["laptops"]
-    laptop_options = [f"{laptop['name']} ({laptop['model']})" for laptop in laptops]
-    selected_laptop = st.selectbox("Choose a laptop:", laptop_options)
-    add_new_laptop = st.checkbox("Add a new laptop")
-    
-    if add_new_laptop:
-        st.subheader("Add New Laptop")
-        new_laptop_name = st.text_input("New Laptop Name:")
-        new_laptop_model = st.text_input("New Laptop Model:")
-        new_cpu = st.text_input("New CPU:")
-        new_ram = st.text_input("New RAM:")
-        new_storage = st.text_input("New Storage:")
-        if st.button("Add Laptop"):
+    if st.session_state.state["step"] == "laptop_select":
+        if st.button("Add Laptop", key="add_laptop") and st.session_state.get("add_new_laptop", False):
+            new_laptop_name = st.session_state.get("new_laptop_name", "")
+            new_laptop_model = st.session_state.get("new_laptop_model", "")
+            new_cpu = st.session_state.get("new_cpu", "")
+            new_ram = st.session_state.get("new_ram", "")
+            new_storage = st.session_state.get("new_storage", "")
             if all([new_laptop_name, new_laptop_model, new_cpu, new_ram, new_storage]):
                 new_laptop = {
                     "laptop_id": f"LAP{str(uuid.uuid4())[:8]}",
@@ -110,53 +112,122 @@ if st.session_state.state["step"] == "laptop_select":
                 if db.customers_collection.update_one(
                     {"username": customer["username"]},
                     {"$set": {"laptops": customer["laptops"]}}
-                ):
+                ).modified_count:
                     st.session_state.state["customer"] = customer
-                    st.success("New laptop added!")
+                    add_to_output_history(f"Added laptop: {new_laptop_name} ({new_laptop_model})")
+                    add_to_output_history("New laptop added!", "system success")
                 else:
-                    st.error("Failed to add laptop.")
+                    add_to_output_history("Failed to add laptop.", "system error")
             else:
-                st.error("Please fill all fields.")
-    
-    if st.button("Proceed with Selected Laptop"):
-        if selected_laptop:
-            laptop_index = laptop_options.index(selected_laptop)
-            st.session_state.state["laptop_id"] = laptops[laptop_index]["laptop_id"]
-            st.session_state.state["step"] = "query_process"
-            st.success("Laptop selected!")
-        else:
-            st.error("Please select a laptop.")
+                add_to_output_history("Please fill all fields.", "system error")
+            st.rerun()
+        
+        if st.button("Proceed", key="laptop_proceed"):
+            selected_laptop = st.session_state.get("selected_laptop", "Select a laptop")
+            laptops = st.session_state.state["customer"]["laptops"]
+            laptop_options = [f"{laptop['name']} ({laptop['model']})" for laptop in laptops]
+            if selected_laptop in laptop_options:
+                laptop_index = laptop_options.index(selected_laptop)
+                st.session_state.state["laptop_id"] = laptops[laptop_index]["laptop_id"]
+                st.session_state.state["laptop_details"] = laptops[laptop_index]
+                st.session_state.state["step"] = "query_process"
+                add_to_output_history(f"Selected laptop: {selected_laptop}")
+                add_to_output_history("Laptop selected!", "system success")
+            else:
+                add_to_output_history("Please select a laptop.", "system error")
+            st.rerun()
 
-# Step 4: Query input
-if st.session_state.state["step"] == "query_process":
-    st.subheader("Submit Your Query")
-    query = st.text_area("Enter your query:")
-    if st.button("Submit Query"):
+    if st.session_state.state["step"] == "query_process" and st.button("Send", key="query_send"):
+        query = st.session_state.get("query_input", "")
         if query:
-            st.session_state.state["query"] = query
-            output = run_graph(st.session_state.state)
-            st.session_state.state["output_display"] = output
-            if output["result"].get("solution"):
-                st.success("Solution found!")
-                st.write("**Solution**:")
-                st.write(output["result"]["solution"])
-                if output["result"].get("references"):
-                    st.write("**References**:")
-                    for ref in output["result"]["references"]:
-                        st.write(f"- Ticket ID: {ref['ticket_id']}, Query: {ref['query']}")
+            laptop = st.session_state.state["laptop_details"]
+            if laptop:
+                laptop_context = f"{laptop['name']} {laptop['model']}, {laptop['specifications']['cpu']} query is: "
+                enhanced_query = f"{laptop_context}{query}"
             else:
-                st.info("Your query has been noted. We will follow up soon.")
+                enhanced_query = query
+            add_to_output_history(f"Query: {query}")
+            st.session_state.state["query"] = enhanced_query
+            output = run_graph(st.session_state.state)
+            if output["result"].get("solution"):
+                add_to_output_history("Solution found!", "system success")
+                add_to_output_history(f"Solution: {output['result']['solution']}", "system info")
+                if output["result"].get("references"):
+                    for ref in output["result"]["references"]:
+                        add_to_output_history(f"Reference - Ticket ID: {ref['ticket_id']}, Query: {ref['query']}, Solution: {', '.join(ref['answers'])}", "system info")
+                st.session_state.state["step"] = "query_options"
+            else:
+                add_to_output_history("Your query has been noted. We will follow up soon.", "system info")
+                st.session_state.state["step"] = "query_options"
+            st.rerun()
         else:
-            st.error("Please enter a query.")
+            add_to_output_history("Please enter a query.", "system error")
+            st.rerun()
 
-# Display persisted output if available
-if st.session_state.state["output_display"]:
-    output = st.session_state.state["output_display"]
-    if output.get("message") and st.session_state.state["step"] in ["username", "register"]:
-        if "found" in output["message"]:
-            st.success(output["message"])
+    if st.session_state.state["step"] == "query_options":
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("Enter Another Query", key="another_query"):
+                st.session_state.state["step"] = "query_process"
+                add_to_output_history("Ready to enter another query.", "system info")
+                st.rerun()
+        with col2:
+            if st.button("Exit", key="exit"):
+                st.session_state.state = {
+                    "username": "",
+                    "customer": None,
+                    "new_user": False,
+                    "laptop_id": None,
+                    "laptop_details": None,
+                    "query": "",
+                    "result": {},
+                    "message": "",
+                    "step": "username",
+                    "output_history": []
+                }
+                add_to_output_history("Session ended. Start a new session.", "system info")
+                st.rerun()
+
+    # Display input for current state in sidebar
+    if st.session_state.state["step"] == "username":
+        st.text_input("Enter your username:", placeholder="e.g., john_doe", key="username_input")
+
+    if st.session_state.state["step"] == "register":
+        st.text_input("Full Name:", placeholder="e.g., John Doe", key="name")
+        st.text_input("Laptop Name:", placeholder="e.g., HP Pavilion x360", key="laptop_name")
+        st.text_input("Laptop Model:", placeholder="e.g., 14-dw1036TU", key="laptop_model")
+        st.text_input("CPU:", placeholder="e.g., Intel i5-1135G7", key="cpu")
+        st.text_input("RAM:", placeholder="e.g., 8GB", key="ram")
+        st.text_input("Storage:", placeholder="e.g., 512GB SSD", key="storage")
+
+    if st.session_state.state["step"] == "laptop_select":
+        laptops = st.session_state.state["customer"]["laptops"]
+        laptop_options = [f"{laptop['name']} ({laptop['model']})" for laptop in laptops]
+        st.selectbox("Choose a laptop:", ["Select a laptop"] + laptop_options, key="selected_laptop")
+        st.session_state.add_new_laptop = st.checkbox("Add a new laptop")
+        if st.session_state.add_new_laptop:
+            st.text_input("New Laptop Name:", placeholder="e.g., Dell XPS 13", key="new_laptop_name")
+            st.text_input("New Laptop Model:", placeholder="e.g., XPS-9310", key="new_laptop_model")
+            st.text_input("New CPU:", placeholder="e.g., Intel i7-1165G7", key="new_cpu")
+            st.text_input("New RAM:", placeholder="e.g., 16GB", key="new_ram")
+            st.text_input("New Storage:", placeholder="e.g., 1TB SSD", key="new_storage")
+
+    if st.session_state.state["step"] == "query_process":
+        st.text_area("Enter your query:", placeholder="e.g., How to fix blue screen error?", key="query_input")
+
+# Display all output messages on main screen
+for message in sorted(st.session_state.state["output_history"], key=lambda x: x["timestamp"]):
+    if message["type"].startswith("system"):
+        if message["type"].endswith("success"):
+            st.success(message["message"])
+        elif message["type"].endswith("warning"):
+            st.warning(message["message"])
+        elif message["type"].endswith("error"):
+            st.error(message["message"])
         else:
-            st.warning(output["message"])
+            st.info(message["message"])
+    else:
+        st.write(f"You: {message['message']}")
 
 if __name__ == "__main__":
     st.write("AI Ticketing Platform ready.")
