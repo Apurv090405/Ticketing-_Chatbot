@@ -1,5 +1,5 @@
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from langchain.schema import Document
 import google.generativeai as genai
 from db import db
@@ -48,6 +48,9 @@ class RAGPipeline:
 
     def _generate_gemini_solution(self, user_query, matched_tickets, web_content=None):
         try:
+            if not matched_tickets:
+                return "In our past data, there are no similar records. Our technical team will look into this and call back soon with a solution."
+            
             ticket_details = ""
             for ticket in matched_tickets:
                 ticket_details += f"Ticket ID: {ticket['ticket_id']}\n"
@@ -59,10 +62,13 @@ class RAGPipeline:
             prompt = f"""
 User Query: {user_query}
 
-The following are related tickets from the database:
+Related tickets from the database:
 {ticket_details}
 {web_info}
-Based on the user query, provided tickets, and web search results (if any), generate a concise and accurate solution to the user's issue. Also make sure it is same as the example format given in the prompt like 3-4 lines and each line should not exceed 10 words.
+Instructions:
+- If no ticket details are provided or they indicate "No matching query found in database.", return: "In our past data, there are no similar records. Our technical team will look into this and call back soon with a solution."
+- Otherwise, generate a concise solution to the user's issue in 3-4 lines, with each line not exceeding 10 words. foe example, "1. some solution 1\n 2. some solution 2\n 3. some solution 3"
+- Do not request additional information or tickets.
 """
             response = self.gemini_model.generate_content(prompt)
             return response.text.strip()
@@ -114,29 +120,36 @@ Based on the user query, provided tickets, and web search results (if any), gene
     def retrieve(self, query, customer, laptop_id, k=3):
         try:
             if not self.vector_store:
-                solution = self._generate_gemini_solution(query, [])
-                self._save_to_db(query, solution, customer, laptop_id)
-                self._save_to_json({
-                    "query": query,
-                    "laptop_id": laptop_id,
-                    "customer_id": customer["customer_id"],
-                    "solution": solution
-                })
-                return {
-                    "query": query,
-                    "solution": solution,
-                    "references": []
-                }
-            results = self.vector_store.similarity_search_with_score(query, k=k)
-            matched_tickets = [
-                {
+                return {"message": "No tickets available in database."}
+            
+            # Find laptop details
+            laptop = next((l for l in customer["laptops"] if l["laptop_id"] == laptop_id), None)
+            if laptop:
+                query_with_context = f"{query} for {laptop['name']} {laptop['model']}"
+            else:
+                query_with_context = query
+
+            # Perform similarity search
+            results = self.vector_store.similarity_search_with_score(query_with_context, k=k)
+            matched_tickets = []
+            
+            for doc, score in results:
+                if score > 0.5:  # Only include matches with ~70% similarity
+                    continue
+                # Check if laptop model matches
+                ticket_query = doc.metadata["query"].lower()
+                if laptop and (laptop['name'].lower() not in ticket_query and laptop['model'].lower() not in ticket_query):
+                    continue
+                matched_tickets.append({
                     "ticket_id": doc.metadata["ticket_id"],
                     "query": doc.metadata["query"],
                     "answers": doc.metadata["answers"]
-                }
-                for doc, score in results if score <= 0.80
-            ]
-            solution = self._generate_gemini_solution(query, matched_tickets)
+                })
+            
+            if not matched_tickets:
+                return {"message": "No matching query found in database."}
+            
+            solution = self._generate_gemini_solution(query_with_context, matched_tickets)
             self._save_to_db(query, solution, customer, laptop_id)
             self._save_to_json({
                 "query": query,
@@ -161,7 +174,7 @@ Based on the user query, provided tickets, and web search results (if any), gene
             if laptop:
                 query_with_context = f"{query} for {laptop['name']} {laptop['model']}"
             else:
-                queried_with_context = query
+                query_with_context = query
             solution = self._generate_gemini_solution(query_with_context, matched_tickets, web_content)
             self._save_to_db(query, solution, customer, laptop_id)
             self._save_to_json({
