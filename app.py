@@ -6,7 +6,7 @@ import time
 import os
 from dotenv import load_dotenv
 from bson.objectid import ObjectId
-
+import re
 # Load environment variables
 load_dotenv()
 
@@ -228,7 +228,8 @@ def index():
                     laptop = state["laptop_details"]
                     if laptop:
                         laptop_context = f" {laptop['name']}"
-                        enhanced_query = f"{laptop_context}{query}"
+                        cleaned_query = re.sub(r"\b(my|the)?\s*laptop('?s)?\b", '', query, flags=re.IGNORECASE).strip()
+                        enhanced_query = f"{laptop_context} {cleaned_query}"
                     else:
                         enhanced_query = query
                     add_to_output_history(f"Query: {query}")
