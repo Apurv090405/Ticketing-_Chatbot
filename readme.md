@@ -71,20 +71,20 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 ### Install Libraries
 ```bash
-pip install Flask==2.3.2
-pip install pymongo==4.6.3
-pip install google-generativeai==0.5.4
-pip install numpy==1.26.4
-pip install scikit-learn==1.4.2
-pip install langchain-mongodb==0.1.6
-pip install python-dotenv==1.0.1
+pip install Flask
+pip install pymongo
+pip install google-generativeai
+pip install numpy
+pip install scikit-learn
+pip install langchain-mongodb
+pip install python-dotenv
 ```
 
 ### Set Up Gemini API Key
 - Get a key from [Google Cloud](https://cloud.google.com).
 - Set the environment variable:
   ```bash
-  export GEMINI_API_KEY="your-api-key-here"  # On Windows: set GEMINI_API_KEY=your-api-key-here
+  export GEMINI_API_KEY="your-api-key-here"  # On Windows: setx GEMINI_API_KEY your-api-key-here
   ```
 
 ---
