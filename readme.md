@@ -78,6 +78,7 @@ pip install numpy
 pip install scikit-learn
 pip install langchain-mongodb
 pip install python-dotenv
+pip install langgraph
 ```
 
 ### Set Up Gemini API Key
