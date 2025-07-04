@@ -87,6 +87,10 @@ pip install python-dotenv
   export GEMINI_API_KEY="your-api-key-here"  # On Windows: setx GEMINI_API_KEY your-api-key-here
   ```
 
+### Run the project
+```python
+python app.py
+```
 ---
 
 ## 🗃️ Demo Database
