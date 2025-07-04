@@ -5,7 +5,7 @@
 [![MongoDB](https://img.shields.io/badge/MongoDB-4.4+-brightgreen.svg)](https://mongodb.com)
 [![LangGraph](https://img.shields.io/badge/LangGraph-Latest-orange.svg)](https://langchain.com)
 
-Welcome to the **Laptop Support Chatbot**, a live project by Codiste! This Flask-based web application offers intelligent laptop troubleshooting using a Retrieval-Augmented Generation (RAG) system, MongoDB, and the Gemini API. Let’s dive in! 🚀
+Welcome to the **Laptop Support Chatbot**, a project suggested by Codiste! This Flask-based web application offers intelligent laptop troubleshooting using a Retrieval-Augmented Generation (RAG) system, Langgraph, MongoDB, and the Gemini API. Let’s dive in! 🚀
 
 ---
 
@@ -17,7 +17,6 @@ Welcome to the **Laptop Support Chatbot**, a live project by Codiste! This Flask
 - [Installation](#installation)
 - [Demo Database](#demo-database)
 - [Demo Screenshots](#demo-screenshots)
-- [Ending Message](#ending-message)
 - [Acknowledgment](#acknowledgment)
 - [Contact Information](#contact-information)
 
@@ -28,7 +27,7 @@ Welcome to the **Laptop Support Chatbot**, a live project by Codiste! This Flask
 - **Smart Chat Interface**: Engage with a user-friendly UI for login, chat, and device management. 🖱️
 - **Intent Recognition**: Classifies greetings, queries, and device selections with Gemini API. 🧠
 - **RAG Solutions**: Provides step-by-step troubleshooting using past ticket data. 📊
-- **MongoDB Storage**: Manages user data, tickets, and chat history securely. 💾
+- **MongoDB Storage**: Manages user data, tickets, and chat history. 💾
 - **Device Support**: Lists and selects registered laptops for targeted support. 💻
 - **Scalable Design**: Modular architecture for easy updates and growth. 🛠️
 
@@ -106,16 +105,10 @@ all json file was there in database folder.
 ### Chat Interface
 ![Recording 2025-07-02 130104](https://github.com/user-attachments/assets/a76ef80b-6c6d-4d53-bfe1-9202a24a5108)
 
----
-
-## 🌟 Ending Message
-
-Thank you for exploring the Laptop Support Chatbot! A big shoutout to **Codiste** for bringing this live project to life. Let’s keep innovating together! 💻🎉
-
 --- 
 ## 🙏 Acknowledgment
 
-We extend our heartfelt gratitude to **Codiste** for initiating and supporting this live project. Special thanks to the development team, including [Your Name/Team], for their dedication and expertise. We also appreciate the open-source community and Google Cloud for providing the Gemini API, which powers our AI capabilities.
+We extend our heartfelt gratitude to **Codiste** for initiating and supporting this project. We also appreciate the open-source community and Google Cloud for providing the Gemini API, which powers our AI capabilities.
 
 ---
 
