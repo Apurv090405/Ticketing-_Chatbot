@@ -1315,16 +1315,15 @@ def login():
         if user:
             logger.info(f"User {username} logged in successfully")
             return jsonify({"success": True, "username": username, "message": f"Welcome back, {username}!"})
-        new_username = f"user_{uuid.uuid4().hex[:8]}"
         customer_id = f"CUST{str(uuid.uuid4())[:6]}"
         customers_collection.insert_one({
-            "username": new_username,
+            "username": username,
             "customer_id": customer_id,
             "name": username,
             "laptops": []
         })
-        logger.info(f"Created new user with username {new_username}")
-        return jsonify({"success": True, "username": new_username, "message": f"New user created! Your username is {new_username}."})
+        logger.info(f"Created new user with username {username}")
+        return jsonify({"success": True, "username": username, "message": f"Welcome! Your new account has been created."})
     except Exception as e:
         logger.error(f"Error during login: {e}")
         return jsonify({"success": False, "message": "An error occurred during login"})
