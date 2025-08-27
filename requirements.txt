@@ -1,0 +1,8 @@
+Flask
+pymongo
+google-generativeai
+numpy
+scikit-learn
+langchain-mongodb
+python-dotenv
+langgraph
