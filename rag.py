@@ -224,7 +224,7 @@ class RAGSystem:
                 json.dump(self.embeddings, f)
             raise
 
-    def retrieve_answers(self, query: str, chat_history: list = None, top_k: int = 5, similarity_threshold: float = 0.9) -> dict:
+    def retrieve_answers(self, query: str, chat_history: list = None, top_k: int = 5, similarity_threshold: float = 0.75) -> dict:
         try:
             if not isinstance(query, str) or not query.strip():
                 logger.error(f"Invalid query: {query}")
